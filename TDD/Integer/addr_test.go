@@ -11,8 +11,10 @@ func TestHello(t *testing.T) {
 		fmt.Println(sum)
 
 		if sum != expected{
-			t.Error("DAMM")
+			t.Error("Laws of math are broken")
 		}
+
+		
 	})
 }
 
