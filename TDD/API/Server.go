@@ -3,18 +3,11 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 	"net/http"
-	"reflect"
-	"testing"
 )
 
 const jsonContentType = "application/json"
 
-
-type InMemoryPlayerStore struct {
-	store map[string]int
-}
 
 //type Animal interface{
 //	Eater
@@ -108,9 +101,9 @@ func (p *PlayerServer) playersHandler(w http.ResponseWriter, r *http.Request){
 
 }
 
-func(i *InMemoryPlayerStore)GetLeague() []Player{
-	return nil
-}
+//func(i *InMemoryPlayerStore)GetLeague() []Player{
+//	return nil
+//}
 
 func (p *PlayerServer)leagueHandler(w http.ResponseWriter, r *http.Request){
 	w.Header().Set("content-type", jsonContentType)
